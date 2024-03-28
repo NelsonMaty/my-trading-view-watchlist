@@ -1,23 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "Div Replacer",
+  "name": "TradingView Watchlist",
   "version": "1.0",
-  "description": "Replace a div on webpage when clicked",
+  "description": "Shows a list of tickers in TradingView watchlist",
   "permissions": ["activeTab"],
-  "background": {
-    "service_worker": "background.js"
-  },
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "logo.png",
-      "48": "logo.png",
-      "128": "logo.png"
-    }
-  },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["https://www.tradingview.com/"],
       "js": ["content.js"]
     }
   ]
