@@ -1,13 +1,34 @@
 {
   "manifest_version": 3,
-  "name": "TradingView Watchlist",
+  "name": "tradingview watchlist",
   "version": "1.0",
-  "description": "Shows a list of tickers in TradingView watchlist",
-  "permissions": ["activeTab"],
-  "content_scripts": [
+  "description": "shows a list of tickers in tradingview watchlist",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "declarativeNetRequestFeedback"
+  ],
+  "background": {
+    "service_worker": "a.js"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "rules",
+        "path": "rules.json",
+        "enabled": true
+      }
+    ]
+  },
+  "host_permissions": ["https://www.tradingview.com/*"],
+  "web_accessible_resources": [
     {
-      "matches": ["https://www.tradingview.com/"],
-      "js": ["content.js"]
+      "resources": ["watchlist.json"],
+      "matches": ["<all_urls>"]
     }
-  ]
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src http://127.0.0.1:8080/;",
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+  }
 }

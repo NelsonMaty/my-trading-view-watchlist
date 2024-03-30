@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://my-trading-view-watchlist-api.onrender.com"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.tradingview.com/api/v1/symbols_list/active/*",
+      "resourceTypes": ["xmlhttprequest"]
+    }
+  }
+]
