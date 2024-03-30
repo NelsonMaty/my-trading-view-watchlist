@@ -5,12 +5,8 @@
   "description": "shows a list of tickers in tradingview watchlist",
   "permissions": [
     "declarativeNetRequest",
-    "declarativeNetRequestWithHostAccess",
-    "declarativeNetRequestFeedback"
+    "declarativeNetRequestWithHostAccess"
   ],
-  "background": {
-    "service_worker": "a.js"
-  },
   "declarative_net_request": {
     "rule_resources": [
       {
