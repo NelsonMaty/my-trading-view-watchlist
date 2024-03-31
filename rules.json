@@ -5,11 +5,27 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://my-trading-view-watchlist-api.onrender.com"
+        "url": "https://my-trading-view-watchlist-api.onrender.com/symbols_list"
       }
     },
     "condition": {
       "urlFilter": "||www.tradingview.com/api/v1/symbols_list/*",
+      "requestMethods": ["GET"],
+      "resourceTypes": ["xmlhttprequest"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://my-trading-view-watchlist-api.onrender.com/replace_symbol"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.tradingview.com/api/v1/symbols_list/*",
+      "requestMethods": ["POST"]",
       "resourceTypes": ["xmlhttprequest"]
     }
   }
