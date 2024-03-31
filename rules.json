@@ -10,7 +10,7 @@
     },
     "condition": {
       "urlFilter": "||www.tradingview.com/api/v1/symbols_list/*",
-      "requestMethods": ["GET"],
+      "requestMethods": ["get"],
       "resourceTypes": ["xmlhttprequest"]
     }
   },
@@ -25,7 +25,7 @@
     },
     "condition": {
       "urlFilter": "||www.tradingview.com/api/v1/symbols_list/*",
-      "requestMethods": ["POST"]",
+      "requestMethods": ["post"],
       "resourceTypes": ["xmlhttprequest"]
     }
   }
