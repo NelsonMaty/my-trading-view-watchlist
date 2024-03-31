@@ -9,7 +9,7 @@
       }
     },
     "condition": {
-      "urlFilter": "||www.tradingview.com/api/v1/symbols_list/active/*",
+      "urlFilter": "||www.tradingview.com/api/v1/symbols_list/*",
       "resourceTypes": ["xmlhttprequest"]
     }
   }
