@@ -20,7 +20,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://my-trading-view-watchlist-api.onrender.com/replace_symbol"
+        "url": "https://my-trading-view-watchlist-api.onrender.com/symbols_list/replace_symbol"
       }
     },
     "condition": {
