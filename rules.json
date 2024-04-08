@@ -16,7 +16,7 @@
   },
   {
     "id": 2,
-    "priority": 2,
+    "priority": 1,
     "action": {
       "type": "redirect",
       "redirect": {
@@ -24,7 +24,37 @@
       }
     },
     "condition": {
-      "urlFilter": "||www.tradingview.com/api/v1/symbols_list/*",
+      "urlFilter": "||www.tradingview.com/api/v1/symbols_list/*/replace_symbol",
+      "requestMethods": ["post"],
+      "resourceTypes": ["xmlhttprequest"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://my-trading-view-watchlist-api.onrender.com/symbols_list/append"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.tradingview.com/api/v1/symbols_list/*/append",
+      "requestMethods": ["post"],
+      "resourceTypes": ["xmlhttprequest"]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://my-trading-view-watchlist-api.onrender.com/symbols_list/remove"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.tradingview.com/api/v1/symbols_list/*/remove",
       "requestMethods": ["post"],
       "resourceTypes": ["xmlhttprequest"]
     }
